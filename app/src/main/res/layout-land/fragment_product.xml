@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainGray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginLeft="120dp">
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingBottom="32dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="42dp">
+
+                    <TextView
+                        android:id="@+id/tv_product_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tv_price"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toRightOf="@id/tv_product_name"
+                        app:layout_constraintRight_toLeftOf="@id/tv_count"
+                        app:layout_constraintTop_toTopOf="@+id/tv_product_name" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/textMedium"
+                        android:textSize="12sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/tv_price"
+                        app:layout_constraintLeft_toRightOf="@id/tv_price"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <Button
+                        android:id="@+id/btn_buy"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bt_corners"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="@string/buy"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_price"
+                        app:layout_constraintRight_toRightOf="@id/tv_count"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrier"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="tv_product_name,btn_buy"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/codePantus"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/dots1"
+                        app:layout_constraintTop_toBottomOf="@+id/barrier" />
+
+                    <ImageView
+                        android:id="@+id/dots1"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layerType="software"
+                        android:minWidth="10dp"
+                        android:src="@drawable/dotted_line"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title_code"
+                        app:layout_constraintLeft_toRightOf="@id/title_code"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_code_pantus"
+                        app:layout_constraintWidth_min="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_code_pantus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:maxWidth="250dp"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/dots1"
+                        app:layout_constraintLeft_toRightOf="@id/dots1"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_maker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/maker"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/dots2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_code_pantus" />
+
+                    <ImageView
+                        android:id="@+id/dots2"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layerType="software"
+                        android:minWidth="10dp"
+                        android:src="@drawable/dotted_line"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title_maker"
+                        app:layout_constraintLeft_toRightOf="@id/title_maker"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_maker"
+                        app:layout_constraintWidth_min="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_maker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/dots2"
+                        app:layout_constraintLeft_toRightOf="@id/dots2"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/country"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/dots3"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_maker" />
+
+                    <ImageView
+                        android:id="@+id/dots3"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layerType="software"
+                        android:minWidth="10dp"
+                        android:src="@drawable/dotted_line"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title_country"
+                        app:layout_constraintLeft_toRightOf="@id/title_country"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_country"
+                        app:layout_constraintWidth_min="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/dots3"
+                        app:layout_constraintLeft_toRightOf="@id/dots3"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_article"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/article"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/dots4"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_country" />
+
+                    <ImageView
+                        android:id="@+id/dots4"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layerType="software"
+                        android:minWidth="10dp"
+                        android:src="@drawable/dotted_line"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title_article"
+                        app:layout_constraintLeft_toRightOf="@id/title_article"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_article"
+                        app:layout_constraintWidth_min="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_article"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/dots4"
+                        app:layout_constraintLeft_toRightOf="@id/dots4"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_applicability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="32dp"
+                        android:text="@string/applicability"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/dots5"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_article" />
+
+                    <ImageView
+                        android:id="@+id/dots5"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layerType="software"
+                        android:minWidth="10dp"
+                        android:src="@drawable/dotted_line"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title_applicability"
+                        app:layout_constraintLeft_toRightOf="@id/title_applicability"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_applicability"
+                        app:layout_constraintWidth_min="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_applicability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/dots5"
+                        app:layout_constraintLeft_toRightOf="@id/dots5"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                    <TextView
+                        android:id="@+id/title_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/weight"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/dots6"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_applicability" />
+
+                    <ImageView
+                        android:id="@+id/dots6"
+                        android:layout_width="0dp"
+                        android:layout_height="5dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layerType="software"
+                        android:minWidth="10dp"
+                        android:src="@drawable/dotted_line"
+                        app:layout_constraintBaseline_toBaselineOf="@id/title_weight"
+                        app:layout_constraintLeft_toRightOf="@id/title_weight"
+                        app:layout_constraintRight_toLeftOf="@+id/tv_weight"
+                        app:layout_constraintWidth_min="10dp" />
+
+                    <TextView
+                        android:id="@+id/tv_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/textDark"
+                        android:textSize="14sp"
+                        app:layout_constraintBaseline_toBaselineOf="@id/dots6"
+                        app:layout_constraintLeft_toRightOf="@id/dots6"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <ImageButton
+                android:id="@+id/bt_play"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bt_oval_red"
+                android:elevation="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_play"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/cardView"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/bt_link"
+                app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+            <ImageButton
+                android:id="@+id/bt_link"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bt_oval_red"
+                android:elevation="8dp"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_link"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/cardView"
+                app:layout_constraintLeft_toRightOf="@id/bt_play"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

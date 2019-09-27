@@ -1,0 +1,79 @@
+<resources>
+
+    <string-array name="models">
+        <item>Key_B.obj/Key_B_02.obj</item>
+    </string-array>
+    <string name="app_name">Pantus</string>
+
+    <!--bottom nav-->
+    <string name="products">ПРОДУКЦИЯ</string>
+    <string name="news">НОВОСТИ</string>
+
+    <!--dialog info-->
+    <string name="dialog_text">Для того, чтобы увидеть содержимое упаковки, а так же ознакомиться с дополнительной информацией, наведите указатель на лицевую сторону упаковки купленного изделия.</string>
+    <string name="dialog_title">РЕЖИМ СКАНИРОВАНИЯ</string>
+    <string name="dialog_button">Понятно</string>
+
+    <!--permissions-->
+    <string name="permission_denied">Разрешите использование камеры</string>
+    <string name="permission_settings"><u>в настройках</u></string>
+
+    <!--hint search-->
+    <string name="search_hint">Введите поисковую фразу...</string>
+    <string name="end">конец)</string>
+
+    <!--errors-->
+    <string name="text_error">Не удалось получить данные</string>
+    <string name="nothing">Ничего не найдено</string>
+
+    <!--contacts fragment-->
+    <string name="adress_tittle">Фактический адрес</string>
+    <string name="adress">Саратовская область, г. Балаково, ул. Транспортная, 6</string>
+    <string name="time_title">График работы</string>
+    <string name="days">7 дней в неделю</string>
+    <string name="time1">7:00 - 16:00 по московскому времени</string>
+    <string name="time2">8:00 - 17:00 по местному времени</string>
+    <string name="phone_title">Телефон (Бесплатно по всей России)</string>
+    <string name="phone">8 (800) 555 87 21</string>
+    <string name="mail_title">Обслуживание розничных продаж</string>
+    <string name="mail">retail@pantus.ru</string>
+
+    <!--fragment product-->
+    <string name="buy">Купить</string>
+    <string name="codePantus">Код Пантус</string>
+    <string name="country">Страна</string>
+    <string name="article">Артикул</string>
+    <string name="maker">Производитель</string>
+    <string name="applicability">Применимость</string>
+    <string name="weight">Вес</string>
+    <string name="sht">шт</string>
+
+    <!--item product-->
+    <string name="rub">руб</string>
+    <string name="articl">Артикл:\u0020</string>
+    <string name="category">Категория:\u0020</string>
+    <string name="brand">Брэнд:\u0020</string>
+    <string name="oem">OEM:\u0020</string>
+    <string name="comp">\u0020компл.</string>
+
+    <!--order form-->
+    <string name="theme_email">заказ</string>
+    <string name="email_send">retail@pantus.ru</string>
+
+    <string name="fio">ФИО</string>
+    <string name="phone_hint">Телефон</string>
+    <string name="e_mail">E-mail</string>
+    <string name="count">Количество</string>
+    <string name="city">Город</string>
+    <string name="adress_hint">Адрес</string>
+    <string name="comment">Комментарий</string>
+    <string name="send">отправить</string>
+    <string name="load_model">Загружаем модель, немного подождите</string>
+    <string name="load_model_inet">Загружаем модель, немного подождите. Модель будет загружена с сервера</string>
+    <string name="ok">Ок</string>
+    <string name="error_load_model">Не удалось загрузить модель</string>
+    <string name="error">Ошибка</string>
+    <string name="select_model">Укажите вариант товара</string>
+
+
+</resources>

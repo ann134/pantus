@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="colomn_count">1</integer>
+    <dimen name="text_button_a">64dp</dimen>
+    <dimen name="text_button_b">64dp</dimen>
+</resources>
